@@ -32,3 +32,56 @@ body {
   margin: 10px 0;
   font-size: 1.5em;
 }
+
+/* 手機版調整 */
+@media (max-width: 600px) {
+  body::before {
+    content: "當前媒體查詢：max-width: 600px (手機版)";
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: green;
+  }
+
+  body {
+    flex-direction: column;
+  }
+
+  #info p {
+    font-size: 1.2em;
+  }
+}
+
+/* 平板橫向調整 */
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+  body::before {
+    content: "當前媒體查詢：min-width: 601px 和 max-width: 900px 和 橫向 (平板橫向)";
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: green;
+  }
+
+  body {
+    flex-direction: row;
+  }
+
+  #info p {
+    font-size: 1.5em;
+  }
+}
+
+/* 桌面版調整 */
+@media (min-width: 901px) {
+  body::before {
+    content: "當前媒體查詢：min-width: 901px (桌面版)";
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: green;
+  }
+
+  #info p {
+    font-size: 2em;
+  }
+}

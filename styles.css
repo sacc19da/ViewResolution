@@ -1,4 +1,4 @@
-html, body {
+html {
   margin: 0;
   padding: 0;
   height: 100svh; /* 使用新的視口單位 */
@@ -8,6 +8,19 @@ html, body {
   align-items: center;
   box-sizing: border-box;
   border: 5px dashed blue;
+  overflow: hidden; /* 防止滾動條 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100svh; /* 使用新的視口單位 */
+  height: -webkit-fill-available; /* 兼容 Safari */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 5px dashed red;
   overflow: hidden; /* 防止滾動條 */
 }
 

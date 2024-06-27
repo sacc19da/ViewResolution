@@ -7,8 +7,10 @@ function isTablet() {
 }
 
 function detectDevice() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
+  const innerWidth = window.innerWidth;
+  const innerHeight = window.innerHeight;
+  const clientWidth = document.documentElement.clientWidth;
+  const clientHeight = document.documentElement.clientHeight;
   let deviceType = "桌上電腦或筆電";
 
   if (isMobileDevice()) {
@@ -18,7 +20,8 @@ function detectDevice() {
   }
 
   document.getElementById('device-type').innerText = `裝置類型: ${deviceType}`;
-  document.getElementById('resolution').innerText = `可視區域解析度: ${width} x ${height}`;
+  document.getElementById('innerResolution').innerText = `window.inner解析度: ${innerWidth} x ${innerHeight}`;
+  document.getElementById('documentClientResolution').innerText = `document.documentElement.client解析度: ${clientWidth} x ${clientHeight}`;
 }
 
 window.onload = detectDevice;

@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   box-sizing: border-box;
-  border: 2px dashed black;
+  border: 5px dashed black;
   overflow: hidden; /* 防止滾動條 */
 }
 
